@@ -199,7 +199,6 @@ class App(QWidget):
             temp = []
             for t, l in zip(range(c, d), range(ar, br, -1)):
                 temp.append(self.matrix[t][l])
-            print(temp)
             if set(temp) == set(who) and len(temp) == 5:
                 self.end_game(who)
                 return True
