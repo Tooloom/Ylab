@@ -172,8 +172,8 @@ class App(QWidget):
         for i in range(5):
             a = sorted([0, x - 4 + i, 9])[1]
             b = sorted([0, x + i + 1, 10])[1]
-            ar = sorted([0, x + 4 - i, 9])[1]
-            br = sorted([0, x - i - 1, 9])[1]
+            ar = sorted([-1, x + 4 - i, 9])[1]
+            br = sorted([-1, x - i - 1, 10])[1]
             c = sorted([0, y - 4 + i, 9])[1]
             d = sorted([0, y + i + 1, 10])[1]
 
@@ -199,6 +199,7 @@ class App(QWidget):
             temp = []
             for t, l in zip(range(c, d), range(ar, br, -1)):
                 temp.append(self.matrix[t][l])
+            print(temp)
             if set(temp) == set(who) and len(temp) == 5:
                 self.end_game(who)
                 return True
