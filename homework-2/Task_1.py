@@ -14,7 +14,7 @@ class CyclicIterator:
             return next(self.it)
 
 
-# --------------------- main ---------------------
+# --------------------- Main ---------------------
 if __name__ == '__main__':
     cyclic_iterator = CyclicIterator(range(3))
     for i in cyclic_iterator:

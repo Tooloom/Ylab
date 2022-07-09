@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from datetime import datetime, timedelta  # added timedelta
+from datetime import datetime, timedelta  # Added timedelta
 from typing import Generator, List, Tuple
 
 
@@ -16,7 +16,7 @@ class Movie:
                 day_step += 1
 
 
-# --------------------- main ---------------------
+# --------------------- Main ---------------------
 if __name__ == '__main__':
     m = Movie('sw', [
         (datetime(2020, 1, 1), datetime(2020, 1, 7)),
