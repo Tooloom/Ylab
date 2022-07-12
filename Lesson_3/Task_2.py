@@ -32,7 +32,3 @@ def say_hello_to_my_little_friends_general_kenobi():
 if __name__ == '__main__':
     new_func = redo_decorator(4, 1, 2, 7, say_hello_to_my_little_friends_general_kenobi)
     new_func()
-
-print('\n--------------------- Some info ---------------------')
-print(say_hello_to_my_little_friends_general_kenobi.__name__)
-print(say_hello_to_my_little_friends_general_kenobi.__doc__)
