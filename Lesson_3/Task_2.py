@@ -17,10 +17,14 @@ def redo_decorator(call_count, start_sleep_time, factor, border_sleep_time, func
 
             print(f'Запуск номер {number}. Ожидание: {timer} секунд. Результат декорируемой функций = {result}')
 
+            wrapper.__name__ = func.__name__  # явно сохраняем имя функции
+            wrapper.__doc__ = func.__doc__  # явно сохраняем описание функции
+
     return wrapper
 
 
 def say_hello_to_my_little_friends_general_kenobi():
+    """Answer to General Grievous"""
     return 'Hello there!'
 
 
@@ -28,3 +32,7 @@ def say_hello_to_my_little_friends_general_kenobi():
 if __name__ == '__main__':
     new_func = redo_decorator(4, 1, 2, 7, say_hello_to_my_little_friends_general_kenobi)
     new_func()
+
+print('\n--------------------- Some info ---------------------')
+print(say_hello_to_my_little_friends_general_kenobi.__name__)
+print(say_hello_to_my_little_friends_general_kenobi.__doc__)
