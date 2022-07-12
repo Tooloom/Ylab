@@ -7,7 +7,7 @@ def redo_decorator(call_count, start_sleep_time, factor, border_sleep_time, func
 
         for i in range(call_count):
             if timer < border_sleep_time:
-                timer = start_sleep_time * factor ** i  # Надеюсь, правильно понял формулу, ибо были неясности
+                timer = start_sleep_time * factor ** i  # надеюсь, правильно понял формулу, ибо были неясности
             if timer >= border_sleep_time:
                 timer = border_sleep_time
 
@@ -24,7 +24,7 @@ def redo_decorator(call_count, start_sleep_time, factor, border_sleep_time, func
 
 
 def say_hello_to_my_little_friends_general_kenobi():
-    """Answer to General Grievous"""
+    """Answer to General Grievous."""
     return 'Hello there!'
 
 
@@ -32,3 +32,7 @@ def say_hello_to_my_little_friends_general_kenobi():
 if __name__ == '__main__':
     new_func = redo_decorator(4, 1, 2, 7, say_hello_to_my_little_friends_general_kenobi)
     new_func()
+
+    print('\n--------------------- Some info ---------------------')
+    print(new_func.__name__)
+    print(new_func.__doc__)
