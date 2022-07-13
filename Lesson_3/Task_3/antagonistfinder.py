@@ -1,3 +1,4 @@
 class AntagonistFinder:
-    def get_antagonist(self, place):
+    @staticmethod
+    def get_antagonist(place):
         place.antagonist_maker()

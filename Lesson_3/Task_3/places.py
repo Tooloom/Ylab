@@ -9,9 +9,10 @@ class Place(ABC):
 
 # -------------------------------------------------
 class Kostroma(Place):
-    city_name = 'Kostroma'
+    name = 'Kostroma'
 
-    def get_orcs(self):
+    @staticmethod
+    def get_orcs():
         print('Orcs hid in the forest')  # easter egg detected
 
     def antagonist_maker(self):
@@ -21,7 +22,8 @@ class Kostroma(Place):
 class Tokyo(Place):
     name = 'Tokyo'
 
-    def get_godzilla(self):
+    @staticmethod
+    def get_godzilla():
         print('Godzilla stands near a skyscraper')
 
     def antagonist_maker(self):
