@@ -9,3 +9,9 @@ from src.services import PostService, get_post_service
 router = APIRouter()
 
 
+@router.get(path="/users", summary="Registration", tags=["registration"])
+def user_registration(user: UserModel):
+    pass
+
+
+
