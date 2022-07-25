@@ -27,9 +27,7 @@ def root():
 def startup():
     """Подключаемся к базам при старте сервера"""
     cache.cache = redis_cache.CacheRedis(
-        cache_instance=redis.Redis(
-            host=config.REDIS_HOST, port=config.REDIS_PORT, max_connections=10
-        )
+        cache_instance=redis.Redis(host=config.REDIS_HOST, port=config.REDIS_PORT, max_connections=10)
     )
 
 
@@ -50,6 +48,7 @@ if __name__ == "__main__":
     # запустим uvicorn сервер через python
     uvicorn.run(
         "main:app",
-        host="0.0.0.0",
+        host="0.0.0.0",  # "127.0.0.1"
         port=8000,
+        reload=True  # testing reload
     )

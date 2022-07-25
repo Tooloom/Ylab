@@ -8,12 +8,12 @@ from sqlmodel import Session
 from src.api.v1.schemas import PostCreate, PostModel
 from src.db import AbstractCache, get_cache, get_session
 from src.models import Post
-from src.services import ServiceMixin
+from src.services import PostMixin
 
 __all__ = ("PostService", "get_post_service")
 
 
-class PostService(ServiceMixin):
+class PostService(PostMixin):
     def get_post_list(self) -> dict:
         """Получить список постов."""
         posts = self.session.query(Post).order_by(Post.created_at).all()

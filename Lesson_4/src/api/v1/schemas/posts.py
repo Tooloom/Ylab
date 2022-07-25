@@ -14,6 +14,7 @@ class PostBase(BaseModel):
     description: str
 
 
+# ----------------------------------------------
 class PostCreate(PostBase):
     ...
 
@@ -21,6 +22,7 @@ class PostCreate(PostBase):
 class PostModel(PostBase):
     id: int
     created_at: datetime
+    author_id: str
 
 
 class PostListResponse(BaseModel):
